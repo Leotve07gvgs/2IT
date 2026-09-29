@@ -1,0 +1,1 @@
+Jeg ser adressen til github reposteriet. Jeg kan se at Git bruker ssh fordi det ikke bruker https i ladressen, men bruker git@github.com: isteden. Origin er standardnavn(Alias) på stedet man lastet ned prosjektet fra

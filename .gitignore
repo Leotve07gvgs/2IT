@@ -2,3 +2,6 @@
 *.mp4
 *.mov
 *.mkv
+
+# Editor temp files
+*.swp
