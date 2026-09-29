@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<title>Prosjektoppgave IT2 – Universell Utforming</title>
+<style>
+  @page { size: A4; margin: 20mm 22mm; }
+
+  :root{
+    --ink:   #1A2330;
+    --soft:  #55637A;
+    --blue:  #17549E;
+    --teal:  #0E8A7E;
+    --rule:  #D9E2EC;
+  }
+
+  body{
+    margin:0;
+    background:#FFFFFF;
+    color:var(--ink);
+    font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    font-size:11pt;
+    line-height:1.65;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  /* ---- tittel ---- */
+  .title{ margin-bottom:26px; }
+  .title h1{
+    margin:0;
+    font-size:21pt;
+    font-weight:600;
+    line-height:1.25;
+    color:var(--blue);
+    letter-spacing:-.01em;
+  }
+  .title .line{
+    margin-top:12px;
+    height:3px; width:68px;
+    background:var(--teal);
+    border-radius:2px;
+  }
+
+  /* ---- overskrifter ---- */
+  h2{
+    margin:30px 0 12px;
+    padding-bottom:6px;
+    border-bottom:1px solid var(--rule);
+    font-size:14pt;
+    font-weight:600;
+    color:var(--blue);
+    letter-spacing:-.01em;
+    break-after:avoid;
+  }
+  h2:first-of-type{ margin-top:0; }
+
+  h3{
+    margin:22px 0 8px;
+    font-size:11.5pt;
+    font-weight:600;
+    color:var(--teal);
+    break-after:avoid;
+  }
+
+  h4{
+    margin:16px 0 4px;
+    font-size:11pt;
+    font-weight:600;
+    color:var(--ink);
+    break-after:avoid;
+  }
+
+  p{ margin:0 0 12px; }
+  p.tight{ margin-bottom:6px; }
+  .keep{ break-inside:avoid; }
+
+  /* ---- lister ---- */
+  ul{ margin:0 0 12px; padding-left:20px; }
+  li{ margin-bottom:7px; padding-left:2px; }
+  li::marker{ color:var(--teal); }
+  ul ul{ margin:6px 0 0; }
+  ul ul li{ margin-bottom:3px; color:var(--soft); font-size:10.5pt; }
+  ul ul li::marker{ color:var(--rule); }
+
+  /* ---- kode ---- */
+  code, .code{
+    font-family:Consolas,"Cascadia Mono","Courier New",monospace;
+    font-size:10pt;
+  }
+  code{ color:var(--blue); }
+  .code{
+    display:block;
+    margin:8px 0 14px;
+    padding-left:14px;
+    border-left:3px solid var(--teal);
+    color:#243447;
+    line-height:1.7;
+    white-space:pre-wrap;
+    word-break:break-word;
+  }
+</style>
+</head>
+<body>
+
+<div class="title">
+  <h1>Prosjektoppgave IT2:<br>Universell Utforming og IT-standarder i Praksis</h1>
+  <div class="line"></div>
+</div>
+
+<h2>Del 1</h2>
+
+<p>uu-tilsynet ønsker et samfunn der alle kan delta, det gjelder også digitalt.</p>
+
+<p>DigDir ønsker å bidra til effektiv og samordnet offentlig sektor.</p>
+
+<p>Den private sektoren har 35 krav som de må følge, mens den offentlige sektoren har 48.</p>
+
+<p>Det kan hende at staten vil ha mer ut av folk enn de klarer, da oppstår det et funksjonsgap. Ved å
+bruke universell utforming senkes det som staten trenger at folk kan, akkurat som at ved å gi folk
+rullestoler øker det de kan gjøre.</p>
+
+<p>Universell utforming gjelder 100% av befolkningen, selv om det bare er 20% som har nedsatt
+funksjonsevne. Allikevel er det til hjelp for alle, men også nyttig for de som har nedsatt
+funksjonsevne.</p>
+
+<p>I uu-tilsynet beskriver de funksjonsgapet som at de som har nedsatt funksjons evne skal være
+likestilt som de som ikke sliter med nedsatt funksjons evne. dette gjelder både digitalt og i evnen
+deres til å delta i samfunnet</p>
+
+<p>Det er uu-Tilsynet som har kontroll over IKT-løsninger i Norge, og uu-Tilsynet kan gi bøter dersom
+det blir brudd på WCAG-reglementet.</p>
+
+<h2>Sammendrags rapport - &ldquo;Manus&rdquo;</h2>
+
+<ul>
+  <li>Tab-navigering funker dårlig for å bla gjennom hele siden.</li>
+  <li>dårlige lenke beskrivelser
+    <ul>
+      <li>F.eks &ldquo;her&rdquo; og &ldquo;klikk her&rdquo; og lenker uten noe beskrivelser</li>
+    </ul>
+  </li>
+  <li>Manglende alt-tekst</li>
+  <li>Nettsiden har tekst som er vanskelig å lese.
+    <ul>
+      <li>dårlig kontrast med tekst på noen deler</li>
+      <li>mye liten tekst</li>
+    </ul>
+  </li>
+  <li>bilder av tabeller som ikke kan leses</li>
+  <li>hopper over deler av nettsiden totalt</li>
+</ul>
+
+<div class="keep">
+<p>Navigering blant menyene funker som den skal.</p>
+
+<p>Bruk av farger og kontrast gjør det mye enklere å navigere og finne veien.</p>
+</div>
+
+<h2>Del 3</h2>
+
+<h3>Eksempel 1:</h3>
+
+<h4>a)</h4>
+
+<p class="tight"><strong>1 brudd:</strong> Knappen bruker elementet <code>&lt;div&gt;</code>, men den
+burde bruke elementet <code>&lt;button&gt;</code> isteden fordi da definerer man at det er en knapp.</p>
+
+<p class="tight"><strong>2 brudd:</strong> Knappen sin class navn er ikke forklarende men sier bare
+&ldquo;knapp&rdquo;.</p>
+
+<p><strong>3 brudd:</strong> Bakgrunnsfargen og teskt fargen er begge grå, det gjør det vanskelig og
+lese.</p>
+
+<h4>b)</h4>
+
+<span class="code">&lt;button class=&rdquo;send-inn-skjema&rdquo; onclick=&rdquo;sendSkjema()&rdquo; style=&rdquo;background-color: #ffffff; color:
+#000000;&rdquo;&lt;button&gt;Send inn skjema&lt;/button&gt;</span>
+
+<h3>Eksempel 2:</h3>
+
+<p>Påstanden som en av prosjektdeltakerne sa er feil fordi WCAG er ikke bare til hjelp for de som har
+nedsatt funksjonsevne men det er også til hjelp for alle.</p>
+
+<h3>Eksempel Eksamensoppgave 3</h3>
+
+<p>Videospilleren må være synlig og man må kunne styre spilleren ved bruk av tastaturet. Videoen må ha
+teksting for de som ikke kan høre så godt og de må beskrive hva som skjer med lyd for de som er
+svaksynte. Den bør også ha transkriptet tilgjengelig sånn at man også kan lese den. Det er også en lur
+ide å la brukere velge når de vil starte videoen.</p>
+
+</body>
+</html>

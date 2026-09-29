@@ -1,0 +1,4 @@
+# Large video files (GitHub rejects files over 100 MB)
+*.mp4
+*.mov
+*.mkv
